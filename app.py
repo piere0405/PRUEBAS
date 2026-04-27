@@ -81,7 +81,7 @@ else:
     st.subheader("Resumen por Jefatura y Supervisor")
     st.dataframe(tabla_resumen)
     buffer = BytesIO() 
-    nuevo_filtrado.to_excel(buffer, index=False, engine="openpyxl")
+    data_filtrada.to_excel(buffer, index=False, engine="openpyxl")
     st.download_button(
         label="Descargar Excel",
         data=buffer.getvalue(),
